@@ -1,0 +1,113 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x1F55F09AB0E251EC",
+      "device": "xc7a200tfbg676-2",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3"
+    },
+    "design_tree": {
+      "dds_compiler_0": "",
+      "spi_interface_0": ""
+    },
+    "ports": {
+      "clk_0": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "Output_sine": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "input_sine": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      }
+    },
+    "components": {
+      "dds_compiler_0": {
+        "vlnv": "xilinx.com:ip:dds_compiler:6.0",
+        "xci_name": "design_1_dds_compiler_0_0",
+        "parameters": {
+          "Amplitude_Mode": {
+            "value": "Full_Range"
+          },
+          "DATA_Has_TLAST": {
+            "value": "Not_Required"
+          },
+          "DDS_Clock_Rate": {
+            "value": "50"
+          },
+          "Frequency_Resolution": {
+            "value": "0.4"
+          },
+          "Has_Phase_Out": {
+            "value": "false"
+          },
+          "Latency": {
+            "value": "3"
+          },
+          "M_DATA_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Noise_Shaping": {
+            "value": "Auto"
+          },
+          "Output_Frequency1": {
+            "value": "0.00005"
+          },
+          "Output_Selection": {
+            "value": "Sine"
+          },
+          "Output_Width": {
+            "value": "8"
+          },
+          "PINC1": {
+            "value": "10000110"
+          },
+          "Phase_Width": {
+            "value": "27"
+          },
+          "Phase_offset": {
+            "value": "None"
+          },
+          "S_PHASE_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Spurious_Free_Dynamic_Range": {
+            "value": "45"
+          }
+        }
+      },
+      "spi_interface_0": {
+        "vlnv": "xilinx.com:user:spi_interface:1.0",
+        "xci_name": "design_1_spi_interface_0_0"
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "spi_interface_0/clk",
+          "dds_compiler_0/aclk"
+        ]
+      },
+      "dds_compiler_0_m_axis_data_tdata": {
+        "ports": [
+          "dds_compiler_0/m_axis_data_tdata",
+          "spi_interface_0/dout",
+          "input_sine"
+        ]
+      },
+      "spi_interface_0_dataout": {
+        "ports": [
+          "spi_interface_0/dataout",
+          "Output_sine"
+        ]
+      }
+    }
+  }
+}

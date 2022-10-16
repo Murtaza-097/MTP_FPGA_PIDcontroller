@@ -1,0 +1,16 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Oct 12 23:47:09 2022
+| Host         : HYDRA running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a200tfbg676-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_spi_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_spi_interface_0_0 (xilinx.com:user:spi_interface:1.0) from (Rev. 2) to (Rev. 3)
+
